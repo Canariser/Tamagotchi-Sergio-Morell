@@ -22,8 +22,9 @@ public class Main {
                 case 2:
                     // COMER
                     // EL TAMAGOTCHI SOLO COMERA CUANDO EL VALOR DE SACIEDAD SEA MENOR QUE 10
-                    // AL COMER, SACIEDAD SE INCREMENTARA HASTA 5 PUNTOS, TENIENDO EN CUENTA QUE
-                    // EL MAXIMO SON 10 PUNTOS, Y DISMINUIRA EL VALOR DE DIVERSION EN 1
+                    // AL COMER, SACIEDAD SE INCREMENTARA HASTA 3 PUNTOS, TENIENDO EN CUENTA QUE
+                    // EL MAXIMO SON 10 PUNTOS, Y DISMINUIRA EL VALOR DE DIVERSION EN 1 Y MOSTRARA
+                    // EL ESTADO DEL TAMAGOTCHI
                     if (saciedad < 10){
                         diversion--;
                         if (saciedad <= 7){
@@ -42,7 +43,26 @@ public class Main {
                     break;
                 case 3:
                     // JUGAR
-
+                    // EL TAMAGOTCHI SOLO JUGARA CUANDO EL VALOR DE DIVERSION MENOR QUE 10
+                    // AL JUGAR SE INCREMENTARA EL VALOR DE DIVERSION EN 3, TENIENDO EN CUENTA QUE EL
+                    // MAXIMO POSIBLE ES 10, SE DISMINUIRAN LOS VALORES DE SACIEDAD Y ENERGIA EN 1 Y
+                    // SE MOSTRARA EL ESTADO DEL TAMAGOTCHI
+                    if (diversion < 10){
+                        energia--;
+                        saciedad--;
+                        if (diversion <= 7){
+                            diversion = diversion +3;
+                        } else if (diversion == 8){
+                            diversion = diversion +2;
+                        } else if (diversion == 9){
+                            diversion = diversion +1;
+                        }
+                        // MUESTRO EL ESTADO
+                        mostrarEstado();
+                    } else {
+                        // EN CASO CONTRARIO MOSTRARA UN MENSAJE
+                        System.out.println("Ahora no me apetece jugar.");
+                    }
                     break;
                 case 4:
                     // DORMIR

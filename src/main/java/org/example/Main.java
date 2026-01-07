@@ -43,7 +43,7 @@ public class Main {
                     break;
                 case 3:
                     // JUGAR
-                    // EL TAMAGOTCHI SOLO JUGARA CUANDO EL VALOR DE DIVERSION MENOR QUE 10
+                    // EL TAMAGOTCHI SOLO JUGARA CUANDO EL VALOR DE DIVERSION SEA MENOR QUE 10
                     // AL JUGAR SE INCREMENTARA EL VALOR DE DIVERSION EN 3, TENIENDO EN CUENTA QUE EL
                     // MAXIMO POSIBLE ES 10, SE DISMINUIRAN LOS VALORES DE SACIEDAD Y ENERGIA EN 1 Y
                     // SE MOSTRARA EL ESTADO DEL TAMAGOTCHI
@@ -66,7 +66,26 @@ public class Main {
                     break;
                 case 4:
                     // DORMIR
-
+                    // EL TAMAGOTCHI SOLO DORMIRA CUANDO EL VALOR DE ENERGIA SEA MENOR QUE 10
+                    // AL DORMIR SE INCREMENTARA EL VALOR DE ENERGIA EN 3, TENIENDO EN CUENTA QUE EL
+                    // MAXIMO POSIBLE ES 10, SE DISMINUIRAN EL VALOR DE SACIEDAD EN 3 Y EL DE ENERGIA EN 2,
+                    // Y SE MOSTRARA EL ESTADO DEL TAMAGOTCHI
+                    if (energia < 10){
+                        saciedad = saciedad -3;
+                        diversion = diversion -2;
+                        if (energia <= 7){
+                            energia = energia +3;
+                        } else if (energia == 8){
+                            energia = energia +2;
+                        } else if (energia == 9){
+                            energia = energia +1;
+                        }
+                        // MUESTRO EL ESTADO
+                        mostrarEstado();
+                    } else {
+                        // EN CASO CONTRARIO MOSTRARA UN MENSAJE
+                        System.out.println("No tengo sueño.");
+                    }
                     break;
                 default:
                     System.out.println("Selecciona una opcion valida. \n");

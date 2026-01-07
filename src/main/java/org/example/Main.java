@@ -26,17 +26,15 @@ public class Main {
                     // EL MAXIMO SON 10 PUNTOS, Y DISMINUIRA EL VALOR DE DIVERSION EN 1
                     if (saciedad < 10){
                         diversion--;
-                        if (saciedad == 5){
-                            saciedad = saciedad +5;
-                        } else if (saciedad == 6){
-                            saciedad = saciedad +4;
-                        } else if (saciedad == 7){
+                        if (saciedad <= 7){
                             saciedad = saciedad +3;
                         } else if (saciedad == 8){
                             saciedad = saciedad +2;
                         } else if (saciedad == 9){
                             saciedad = saciedad +1;
                         }
+                        // MUESTRO EL ESTADO
+                        mostrarEstado();
                     } else {
                         // EN CASO CONTRARIO MOSTRARA UN MENSAJE
                         System.out.println("No tengo hambre.");

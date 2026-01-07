@@ -15,6 +15,7 @@ public class Main {
                     System.out.println("Saliendo...");
                     break;
                 case 1:
+                    mostrarEstado();
                     break;
                 case 2:
                     break;
@@ -50,35 +51,35 @@ public class Main {
         if (saciedad > 5 && energia > 5 && diversion > 5) {
             System.out.println("(•‿•)  ¡Estoy feliz! \n" +
                                "/|_|\\ \n" +
-                                "| | \n");
+                                " | | \n");
         }
 
         // ESTADO TRISTE
         if (diversion < 5){
             System.out.println("(-︵-)  Estoy aburrido \n" +
                                "/|_|\\  ¡Juega conmigo! \n" +
-                                "/ \\ \n");
+                               " / \\ \n");
         }
 
         // ESTADO CANSADO
         if (energia < 5){
             System.out.println("(-_-)   Zzz \n" +
                                "/|_|\\ \n" +
-                                "| | \n");
+                               " | | \n");
         }
 
         // ESTADO HAMBRIENTO
         if (saciedad < 5){
             System.out.println("(•︵•)   ¡Tengo hambre! \n" +
                                "/|x|\\ \n" +
-                                "| | \n");
+                                " | | \n");
         }
 
         // SI ALGUN ESTADO LLEGA A 0, FIN DEL JUEGO
         if (saciedad == 0 || energia == 0 || diversion == 5){
             System.out.println("(x_x)  :( Game over ): \n" +
                                "/|_|\\ \n" +
-                                "| | \n");
+                                " | | \n");
         }
     }
 }

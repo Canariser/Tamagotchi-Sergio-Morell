@@ -12,16 +12,43 @@ public class Main {
             opcion = menuPrincipal();
             switch(opcion){
                 case 0:
+                    // SALIR
                     System.out.println("Saliendo...");
                     break;
                 case 1:
+                    // ESTADO
                     mostrarEstado();
                     break;
                 case 2:
+                    // COMER
+                    // EL TAMAGOTCHI SOLO COMERA CUANDO EL VALOR DE SACIEDAD SEA MENOR QUE 10
+                    // AL COMER, SACIEDAD SE INCREMENTARA HASTA 5 PUNTOS, TENIENDO EN CUENTA QUE
+                    // EL MAXIMO SON 10 PUNTOS, Y DISMINUIRA EL VALOR DE DIVERSION EN 1
+                    if (saciedad < 10){
+                        diversion--;
+                        if (saciedad == 5){
+                            saciedad = saciedad +5;
+                        } else if (saciedad == 6){
+                            saciedad = saciedad +4;
+                        } else if (saciedad == 7){
+                            saciedad = saciedad +3;
+                        } else if (saciedad == 8){
+                            saciedad = saciedad +2;
+                        } else if (saciedad == 9){
+                            saciedad = saciedad +1;
+                        }
+                    } else {
+                        // EN CASO CONTRARIO MOSTRARA UN MENSAJE
+                        System.out.println("No tengo hambre.");
+                    }
                     break;
                 case 3:
+                    // JUGAR
+
                     break;
                 case 4:
+                    // DORMIR
+
                     break;
                 default:
                     System.out.println("Selecciona una opcion valida. \n");

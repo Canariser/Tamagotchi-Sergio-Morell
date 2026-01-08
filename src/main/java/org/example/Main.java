@@ -87,8 +87,22 @@ public class Main {
                         System.out.println("No tengo sueño.");
                     }
                     break;
+                case 5:
+                    // APRENDER
+                    // EL TAMAGOTCHI APRENDERA CUANDO EL VALOR DE SACIEDAD, ENERGIA Y DIVERSION SEA 10
+                    // Y DISMINUIRA EN 4 PUNTOS LA ENERGIA Y LA SACIEDAD, Y EN 6 LA DIVERSION
+                    if (saciedad == 10 && energia == 10 && diversion == 10){
+                        saciedad = saciedad-4;
+                        energia = energia-4;
+                        diversion = diversion -6;
+                    } else {
+                        // EN CASO CONTRARIO MOSTRARA UN MENSAJE
+                        System.out.println("No quiero aprender.");
+                    }
+                    break;
                 default:
                     System.out.println("Selecciona una opcion valida. \n");
+                    break;
             };
         }while (opcion!=0);
     }
@@ -103,6 +117,7 @@ public class Main {
                 "2. Comer \n" +
                 "3. Jugar \n" +
                 "4. Dormir \n" +
+                "5. Aprender \n" +
                 "---------- \n" +
                 "0. Salir \n");
         opcion = lectura.nextInt();

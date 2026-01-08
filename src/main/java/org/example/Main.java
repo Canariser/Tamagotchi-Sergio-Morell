@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 public class Main {
-    static int saciedad=6, energia=6, diversion = 6;
+    static int saciedad=6, energia=7, diversion = 5;
     public static void main() {
         // DECLARACION DE VARIABLES
         int opcion = 0;
@@ -23,10 +23,10 @@ public class Main {
                     // COMER
                     // EL TAMAGOTCHI SOLO COMERA CUANDO EL VALOR DE SACIEDAD SEA MENOR QUE 10
                     // AL COMER, SACIEDAD SE INCREMENTARA HASTA 3 PUNTOS, TENIENDO EN CUENTA QUE
-                    // EL MAXIMO SON 10 PUNTOS, Y DISMINUIRA EL VALOR DE DIVERSION EN 1 Y MOSTRARA
+                    // EL MAXIMO SON 10 PUNTOS, Y DISMINUIRA EL VALOR DE DIVERSION EN 2 Y MOSTRARA
                     // EL ESTADO DEL TAMAGOTCHI
                     if (saciedad < 10){
-                        diversion--;
+                        diversion = diversion-2;
                         if (saciedad <= 7){
                             saciedad = saciedad +3;
                         } else if (saciedad == 8){
@@ -45,11 +45,11 @@ public class Main {
                     // JUGAR
                     // EL TAMAGOTCHI SOLO JUGARA CUANDO EL VALOR DE DIVERSION SEA MENOR QUE 10
                     // AL JUGAR SE INCREMENTARA EL VALOR DE DIVERSION EN 3, TENIENDO EN CUENTA QUE EL
-                    // MAXIMO POSIBLE ES 10, SE DISMINUIRAN LOS VALORES DE SACIEDAD Y ENERGIA EN 1 Y
+                    // MAXIMO POSIBLE ES 10, SE DISMINUIRAN LOS VALORES DE SACIEDAD en 3 Y ENERGIA EN 2 Y
                     // SE MOSTRARA EL ESTADO DEL TAMAGOTCHI
                     if (diversion < 10){
-                        energia--;
-                        saciedad--;
+                        energia = energia-2;
+                        saciedad = saciedad-3;
                         if (diversion <= 7){
                             diversion = diversion +3;
                         } else if (diversion == 8){

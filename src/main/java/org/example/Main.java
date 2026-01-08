@@ -140,7 +140,7 @@ public class Main {
         }
 
         // SI ALGUN ESTADO LLEGA A 0, FIN DEL JUEGO
-        if (saciedad == 0 || energia == 0 || diversion == 5){
+        if (saciedad == 0 || energia == 0 || diversion == 0){
             System.out.println("(x_x)  :( Game over ): \n" +
                                "/|_|\\ \n" +
                                 " | | \n");
